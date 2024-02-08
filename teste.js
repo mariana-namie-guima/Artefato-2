@@ -22,7 +22,7 @@ var player;
 
 function preload(){
     this.load.image('bg', 'assets/testeBg.png')
-    this.load.image('player', 'assets/gato.png')
+    this.load.image('player', 'assets/p1f.png')
 
 }
 
