@@ -28,5 +28,11 @@ function create(){
 
 
 function update() {
-
+    if(this.cursors.left.isDown){
+        console.log("esquerda");
+        this.player.stVelocityX(-100);
+    }else if (this.cursors.right.isDown){
+        console.log("direita");
+        this.player.stVelocityX(100);
+    }
 }
