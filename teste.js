@@ -1,6 +1,6 @@
 var config = {
     type: Phaser.AUTO,
-    width: 800,
+    width: 900,
     height: 600,
     physics: {
         default: "arcade",
@@ -28,8 +28,7 @@ function preload(){
 
 function create(){
     this.add.image(0, 0, 'bg').setOrigin(0,0);
-    this.add.image(300, 200, 'player').setScale(0.01);
-    this.player = this.physics.add.sprite(400, 150, "player")
+    this.player = this.physics.add.sprite(400, 150, "player"). setScale(0.5);
     this.cursors = this.input.keyboard.createCursorKeys();
 }
 
