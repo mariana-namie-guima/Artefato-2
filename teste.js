@@ -5,7 +5,7 @@ var config = {
     physics: {
         default: "arcade",
         arcade: {
-            gravity:{y:0},
+            gravity:{y:0},  //gravidade 0 no eixo y (player não cai)
             debug: false,
         }
     },
@@ -20,20 +20,20 @@ var game  = new Phaser.Game(config);
 
 var player;
 
-function preload(){
+function preload(){     //imagens que serao carregadas para serem usadas posteriormente
     this.load.image('bg', 'assets/testeBg.png')
     this.load.image('player', 'assets/p1f.png')
 
 }
 
-function create(){
+function create(){      //cria primeiro momento do jogo, em que pode ser definido a posicao das imagens
     this.add.image(0, 0, 'bg').setOrigin(0,0);
     this.player = this.physics.add.sprite(400, 150, "player"). setScale(0.5);
     this.cursors = this.input.keyboard.createCursorKeys();
 }
 
 
-function update() {
+function update() {     //funciona como um loop
     this.player.setVelocityX(0);
     this.player.setVelocityY(0);
     if(this.cursors.left.isDown){
