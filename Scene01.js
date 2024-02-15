@@ -9,12 +9,12 @@ class Scene01 extends Phaser.Scene{
 
     }
 
-    create() {      //cria primeiro momento do jogo, em que pode ser definido a posicao das imagens
+    create() {      //cria primeiro momento do jogo
         var player;
         this.add.image(0, 0, 'bg').setOrigin(0,0);      //adiciona background
         this.player = this.physics.add.sprite(400, 150, "player"). setScale(0.5);       //adiciona personagem
         this.cursors = this.input.keyboard.createCursorKeys();      //adiciona movimentacao pelas setas do teclado
-        
+        this.player.setCollideWorldBounds(true);
 
         this.anims.create({     //animação da posicao de costas do personagem
             key: "costas",      
