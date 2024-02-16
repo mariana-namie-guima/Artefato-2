@@ -4,6 +4,7 @@ window.onload =  function(){
         type: Phaser.AUTO,
         width: 900,
         height: 600,
+        backgroundColor: "77ddf5",
         physics: {
             default: "arcade",
             arcade: {
@@ -11,7 +12,7 @@ window.onload =  function(){
                 debug: false,
             }
         },
-        scene: [Scene01]
+        scene: [Scene00, Scene01]
     }
     let game  = new Phaser.Game(config);
 };
